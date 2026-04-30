@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dev | Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+    <h2>Dev</h2>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <h1>Hi, I'm Dev 👋</h1>
+    <p>Python Developer | Building Real World Projects</p>
+
+    <a href="/static/resume.pdf" class="btn" download>📄 Download Resume</a>
+</section>
+
+<!-- Projects -->
+<section class="projects">
+    <h2>🚀 My Projects</h2>
+
+    <div class="card">
+        <h3>Chat App</h3>
+        <p>Real-time messaging app using Flask & WebSockets</p>
+        <a href="https://github.com/DEMUX32" target="_blank">🔗 GitHub</a>
+    </div>
+
+    <div class="card">
+        <h3>AI Image Classifier</h3>
+        <p>ML model to classify cat vs dog images</p>
+        <a href="https://github.com/DEMUX32" target="_blank">🔗 GitHub</a>
+    </div>
+
+</section>
+
+<!-- Contact -->
+<section class="contact">
+    <h2>📞 Contact</h2>
+    <p>Email: yourmail@gmail.com</p>
+</section>
+
+</body>
+</html>
