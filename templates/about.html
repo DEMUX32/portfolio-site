@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Dev - Python & Cybersecurity</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Insert the Navbar here -->
+
+    <main class="about-page container">
+        <section class="about-hero">
+            <h1>The Story Behind the <span class="highlight">Code</span></h1>
+            <p>From a Diploma in CS to building secure backend architectures.</p>
+        </section>
+
+        <section class="details-grid">
+            <div class="bio-card">
+                <h2><i class="fa-solid fa-user-graduate"></i> My Background</h2>
+                <p>I completed my <strong>Diploma in Computer Science & Technology</strong>, where I built a strong foundation in networking and data structures. This academic journey taught me that software isn't just about making things work—it's about making them secure.</p>
+            </div>
+
+            <div class="bio-card">
+                <h2><i class="fa-solid fa-shield-virus"></i> Why Cybersecurity?</h2>
+                <p>I am fascinated by the "cat and mouse" game of digital security. My goal is to specialize in <strong>Pentesting and Secure Development</strong>. I spend my free time analyzing vulnerabilities and learning how to harden Python applications against attacks.</p>
+            </div>
+        </section>
+
+        <section class="academic-timeline">
+            <h3>Academic Milestones</h3>
+            <div class="milestone">
+                <h4>Diploma in Computer Science & Technology</h4>
+                <span>WBSCTVSED | 2023 - 2026</span>
+                <p>Focused on Network Security, Database Management, and Operating Systems.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+
+</body>
+</html>
+
+<script>
+    const observerOptions = {
+        threshold: 0.1 // Trigger when 10% of the section is visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+            }
+        });
+    }, observerOptions);
+
+    // Apply to all major sections and cards
+    document.querySelectorAll('section, .card, .timeline-item, .info-card').forEach((el) => {
+        el.classList.add('animate-on-scroll');
+        observer.observe(el);
+    });
+</script>

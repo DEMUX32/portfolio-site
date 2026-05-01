@@ -6,5 +6,13 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
+@app.route("/lets-talk")
+def lets_talk():
+    return render_template("chat.html")
+
 if __name__ == "__main__":
     app.run()

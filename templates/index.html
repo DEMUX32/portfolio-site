@@ -1,53 +1,179 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Dev | Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev | Python Developer Portfolio</title>
+    <!-- Google Fonts for a professional look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-
 <body>
 
-<!-- Navbar -->
-<nav>
-    <h2>Dev</h2>
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-</nav>
+<!-- Add FontAwesome for icons in the <head> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-<!-- Hero Section -->
-<section class="hero">
-    <h1>Hi, I'm Dev 👋</h1>
-    <p>Python Developer | Building Real World Projects</p>
+<!-- Navbar (Same as before) -->
+ <header class="main-header">
+    <nav class="navbar container">
+        <!-- Brand Logo -->
+        <div class="logo">
+            <a href="#home">DEV<span>.</span></a>
+        </div>
 
-    <a href="/static/resume.pdf" class="btn" download>📄 Download Resume</a>
+        <!-- Navigation Links -->
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="#home" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="/about" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+                <a href="#projects" class="nav-link">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a href="/lets-talk" class="btn-nav">Let's Talk</a>
+            </li>
+        </ul>
+
+        <!-- Mobile Toggle (For later JS if you want) -->
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+</header>
+
+<!-- Hero Section (Updated with Social Icons) -->
+<header id="home" class="hero">
+    <div class="container">
+        <span class="badge"><i class="fa-solid fa-circle-check"></i> Open to New Opportunities</span>
+        <h1>Building the back-end of <span class="highlight">tomorrow.</span></h1>
+        <p>I'm Dev, a Python Developer focused on high-performance Flask applications and Scalable System Design.</p>
+        <div class="hero-btns">
+            <a href="/static/resume.pdf" class="btn btn-primary">Download CV</a>
+            <div class="social-links">
+                <a href="https://github.com/DEMUX32"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://tryhackme.com">
+                    <img src="https://tryhackme.com/img/favicon.png" alt="TryHackMe" width="30">
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<!-- Experience & Education Timeline (Updated) -->
+<section class="timeline-section">
+    <div class="container">
+        <h2 class="section-title">Academic Foundation</h2>
+        <div class="timeline">
+            <!-- Cybersecurity Goal Badge -->
+            <div class="timeline-item">
+                <div class="time">Future Focus</div>
+                <div class="content">
+                    <h3>Cybersecurity Specialist</h3>
+                    <p>Deepening my expertise in Network Security, Penetration Testing, and Secure Coding practices to build resilient Python applications.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="time">Graduated</div>
+                <div class="content">
+                    <h3>Diploma in Computer Science & Technology</h3>
+                    <p>Foundational studies in Data Structures, Networking, and Operating Systems. Gained core engineering principles that fuel my development work.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
-<!-- Projects -->
-<section class="projects">
-    <h2>🚀 My Projects</h2>
-
-    <div class="card">
-        <h3>Chat App</h3>
-        <p>Real-time messaging app using Flask & WebSockets</p>
-        <a href="https://github.com/DEMUX32" target="_blank">🔗 GitHub</a>
+<!-- Cybersecurity & Skills Section -->
+<section class="skills-grid">
+    <div class="container">
+        <div class="skills-layout">
+            <div class="skill-card">
+                <h3><i class="fa-solid fa-shield-halved"></i> Cybersecurity Interest</h3>
+                <ul>
+                    <li>OWASP Top 10 Awareness</li>
+                    <li>Secure API Development</li>
+                    <li>Network Traffic Analysis</li>
+                    <li>Cryptography Basics</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3><i class="fa-solid fa-code"></i> Core Development</h3>
+                <ul>
+                    <li>Python (Flask/Django)</li>
+                    <li>RESTful API Design</li>
+                    <li>PostgreSQL / MySQL</li>
+                    <li>Git & CI/CD</li>
+                </ul>
+            </div>
+        </div>
     </div>
-
-    <div class="card">
-        <h3>AI Image Classifier</h3>
-        <p>ML model to classify cat vs dog images</p>
-        <a href="https://github.com/DEMUX32" target="_blank">🔗 GitHub</a>
-    </div>
-
 </section>
 
-<!-- Contact -->
-<section class="contact">
-    <h2>📞 Contact</h2>
-    <p>Email: yourmail@gmail.com</p>
+<!-- Updated Projects with Tech Stack Tags -->
+<section id="projects" class="projects">
+    <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="project-grid">
+            
+            <div class="card">
+                <div class="card-header">
+                    <i class="fa-solid fa-comments"></i>
+                    <div class="links">
+                        <a href="https://github.com/DEMUX32"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <h3>Real-time Chat Engine</h3>
+                <p>A WebSocket-based messaging platform capable of handling 100+ concurrent connections.</p>
+                <div class="tech-stack">
+                    <span>Python</span> <span>Flask</span> <span>SocketIO</span> <span>Redis</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <i class="fa-solid fa-brain"></i>
+                    <div class="links">
+                        <a href="https://github.com/DEMUX32"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <h3>AI Image Classifier</h3>
+                <p>Deep learning model built using TensorFlow and Keras to classify visual datasets with high accuracy.</p>
+                <div class="tech-stack">
+                    <span>Python</span> <span>TensorFlow</span> <span>NumPy</span> <span>Keras</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </section>
 
 </body>
 </html>
+
+<script>
+    const observerOptions = {
+        threshold: 0.1 // Trigger when 10% of the section is visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+            }
+        });
+    }, observerOptions);
+
+    // Apply to all major sections and cards
+    document.querySelectorAll('section, .card, .timeline-item, .info-card').forEach((el) => {
+        el.classList.add('animate-on-scroll');
+        observer.observe(el);
+    });
+</script>

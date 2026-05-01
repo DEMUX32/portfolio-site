@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Chat Environment | Dev</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="chat-env-body">
+
+    <div class="env-container">
+        <!-- System Header -->
+        <header class="env-header">
+            <div class="status-bar">
+                <span class="dot pulse-green"></span>
+                <p>SYSTEM ONLINE: PORT 5000</p>
+            </div>
+            <h1>Initializing <span class="highlight">Chat Engine</span></h1>
+        </header>
+
+        <!-- Tech Specifications -->
+        <main class="env-main">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="circles">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <p>stack_info.log</p>
+                </div>
+                <div class="terminal-body">
+                    <p class="line"><span class="cmd">></span> <span class="key">Backend:</span> Flask (Python)</p>
+                    <p class="line"><span class="cmd">></span> <span class="key">Real-time:</span> WebSockets (Socket.io)</p>
+                    <p class="line"><span class="cmd">></span> <span class="key">Security:</span> CSRF Protection & Secure Headers</p>
+                    <p class="line"><span class="cmd">></span> <span class="key">Status:</span> Ready for connection...</p>
+                </div>
+            </div>
+
+            <div class="env-description">
+                <h3>About this Environment</h3>
+                <p>This is a live demonstration of a high-concurrency messaging system. It focuses on low-latency data transfer and secure session handling—core components of modern backend engineering.</p>
+                
+                <div class="warning-box">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <p>Note: This is a public demonstration environment. Please avoid sharing sensitive personal data.</p>
+                </div>
+
+                <a href="https://web.whatsapp.com/" class="launch-btn">
+                    Enter Chat Room <i class="fa-solid fa-right-to-bracket"></i>
+                </a>
+            </div>
+        </main>
+
+        <footer class="env-footer">
+            <a href="{{ url_for('home') }}">← Return to Portfolio</a>
+        </footer>
+    </div>
+
+</body>
+</html>
